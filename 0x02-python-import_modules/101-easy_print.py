@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-std = __import__('sys').stdout
-std.write("#pythoniscool\n")
+import os
+os.write(1, str.encode("#pythoniscool\n"))
