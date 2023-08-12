@@ -3,7 +3,7 @@ import subprocess
 import timeit
 
 # Run my_script.py and measure its execution time
-code_to_run = "subprocess.run(['python3', '1-main.py'], check=True)"
+code_to_run = "subprocess.run(['python3', '2-main.py'], check=True)"
 
 execution_time = timeit.timeit(stmt=code_to_run, setup="import subprocess", number=10)
 
