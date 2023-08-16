@@ -10,7 +10,7 @@ def uniq_add(my_list=[]):
         return sum of all element in my_list
     """
     if not my_list:
-        return (0);
+        return (0)
 
     total = __import__('functools').reduce(lambda x, y: x + y, set(my_list))
     return (total)
