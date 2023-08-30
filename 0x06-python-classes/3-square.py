@@ -35,5 +35,5 @@ class Square:
         Return:
             return value, the square object area
         """
-        area  = self.__size ** 2
+        area = self.__size ** 2
         return (area)
