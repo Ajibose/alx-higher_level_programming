@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""This module defines a class that is based on the module '0-square.py'
-    The class furthermore contain an initialization method
+"""This module defines a class that is based on the module '1-square.py'
+    The class furthermore contain an instantiation method
 
 Example:
     $ s = Square()
