@@ -18,7 +18,11 @@ class Rectangle:
 
     def __str__(self):
         """Print the rectangle"""
-        rect = [["#" for j in range(self.__width)] for i in range(self.__height)]
+        if (self.__width == 0 or self.__height == 0):
+            rect = []
+        else:
+            rect = [["#" for j in range(self.__width)] for i in range(
+                self.__height)]
         return "\n".join(["".join(row) for row in rect])
 
     @property
