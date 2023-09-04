@@ -27,6 +27,7 @@ class Rectangle:
 
     def __repr__(self):
         return f"Rectangle({self.__width}, {self.__height})"
+
     @property
     def width(self):
         """Attribute width setter and getter property"""
