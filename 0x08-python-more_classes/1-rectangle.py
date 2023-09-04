@@ -8,13 +8,18 @@ class Rectangle:
     """A class that creates a rectangle"""
     def __init__(self, width=0, height=0):
         """Instatiate the rectangle object"""
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
 
     @property
     def width(self):
         """Attribute width setter and getter property"""
         return self.__width
+
+    @property
+    def height(self):
+        """Attribute height setter and getter property"""
+        return self.__height
 
     @width.setter
     def width(self, value):
@@ -25,11 +30,6 @@ class Rectangle:
             raise ValueError("width must be >= 0")
 
         self.__width = value
-
-    @property
-    def height(self):
-        """Attribute height setter and getter property"""
-        return self.__height
 
     @height.setter
     def height(self, value):
