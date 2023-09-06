@@ -1,68 +1,48 @@
-A test for the say_my_name function
+=================================================
+Doctest for module `3-say_my_name.py'
+=================================================
+The module contains a function that prints 'My name is <first name> <last name>'
+Two argument has to be passed to it
+	first_name(str): The first name of user
+	last_name(str, optional): The last name of user
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Import module
+----------------------
+	>>> say_name = __import__('3-say_my_name').say_my_name
 
-Import the module
->>> import sys
->>> sys.path.insert(1, '../')
->>> lib = __import__("3-say_my_name")
->>> func = lib.say_my_name
->>> fn1 = "Musa"
->>> ln1 = "Kanneh"
->>> fn2 = 4
->>> ln2 = 5
+Checks for missing argument
+-------------------------------
+	>>> say_name()
+	Traceback (most recent call last):
+		...
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
 
+	>>> say_name(last_name="Segun")
+	Traceback (most recent call last):
+		...
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
 
-#Normal Test
->>> func(fn1, ln1)
-My name is Musa Kanneh
+	>>> say_name("Wale")
+	My name is Wale 
 
-#Type Errors
->>> func(fn1, ln2)
-Traceback (most recent call last):
-...
-TypeError: last_name must be a string
->>> func(fn2, ln1)
-Traceback (most recent call last):
-...
-TypeError: first_name must be a string
+check for argument correct type
+-----------------------------------
+	>>> say_name(4, "Segun")
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string
 
+	>>> say_name(4, 6)
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string
 
->>> fn2 = 4.3
->>> ln2 = 5.7
+	>>> say_name("Segun", 4)
+	Traceback (most recent call last):
+		...
+	TypeError: last_name must be a string
 
+	>>> say_name("Wale", "Segun")
+	My name is Wale Segun
 
->>> func(fn1, ln2)
-Traceback (most recent call last):
-...
-TypeError: last name must be a string
->>> func(fn2, ln1)
-Traceback (most recent call last):
-...
-TypeError: first name must be a string
-
-
-
->>> fn2 = 3 + 1j
->>> ln2 = []
-
-
->>> func(fn1, ln2)
-Traceback (most recent call last):
-...
-TypeError: last_name must be a string
->>> func(fn2, ln1)
-Traceback (most recent call last):
-...
-TypeError: first_name must be a string
-
->>> fn2 = {}
->>> ln2 = 3 + 1j
-
-
->>> func(fn1, ln2)
-Traceback (most recent call last):
-...
-TypeError: last name must be a string
->>> func(fn2, ln1)
-Traceback (most recent call last):
-...
-TypeError: first name must be a string
+	
