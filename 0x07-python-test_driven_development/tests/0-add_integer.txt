@@ -1,61 +1,94 @@
-A test to for adding two inteter
+================================================
+Test for module `0-add_integer`.
+================================================
 
-Import Python module + collections
->>> import sys
->>> sys.path.insert(1, '../')
->>> lib = __import__("0-add_integer")
->>> add_integer = lib.add_integer
+**************The module contains only one function `add_integer`****************
 
-# Normal addition test
->>> add_integer(0)
-98
->>> add_integer(-1)
-97
->>> add_integer(10.5)
-108
+`add_integer` contains two arguments
+	a(int): one of the integers to add
+	b(int, optional): the second integer
 
-# Type Errors
->>> add_integer(10+5j)
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
->>> add_integer([])
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
->>> add_integer({})
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
->>> add_integer(set())
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
+################## Returns: the sum of the two integers#####################
+---------------------------------------------------------------------------------
+import the function
+-------------------------
+	>>> add = __import__('0-add_integer').add_integer
+	
+The argument either be an integer or float otherwise, an exception is raised
+-----------------------------------------------------------------------------
+	>>> add("a", 2)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
 
->>> add_integer("")
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
+	>>> add(3, "4")
+	Traceback (most recent call last):
+		...
+	TypeError: b must be an integer
 
-# Two input addition type errors
->>> add_integer(10, 10+5j)
-Traceback (most recent call last):
-...
-TypeError: b must be an integer
->>> add_integer(10, [])
-Traceback (most recent call last):
-...
-TypeError: b must be an integer
->>> add_integer(10, {})
-Traceback (most recent call last):
-...
-TypeError: b must be an integer
->>> add_integer(10, set())
-Traceback (most recent call last):
-...
-TypeError: b must be an integer
+	>>> add("B", "a")
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
 
->>> add_integer(10, "")
-Traceback (most recent call last):
-...
-TypeError: b must be an integer
+	>>> add([1, 2], 4)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+	>>> add(3, [3, 5])
+	Traceback (most recent call last):
+		...
+	TypeError: b must be an integer
+
+	>>> add(float('inf'), 4)
+	Traceback (most recent call last):
+		...
+	OverflowError: cannot convert float infinity to integer
+
+	>>> add(4, float('inf'))
+	Traceback (most recent call last):
+		...
+	OverflowError: cannot convert float infinity to integer
+
+	>>> add(float('inf'), float('inf'))
+	Traceback (most recent call last):
+		...
+	OverflowError: cannot convert float infinity to integer
+
+	>>> add(float('nan'), 4)
+	Traceback (most recent call last):
+		...
+	ValueError: cannot convert float NaN to integer
+
+	>>> add(3, float('nan'))
+	Traceback (most recent call last):
+		...
+	ValueError: cannot convert float NaN to integer
+
+The arguments must be casted to integers if they are float
+--------------------------------------------------------------------------------
+	>>> add(2.4, 5)
+	7
+
+	>>> add(2, 3.5)
+	5
+
+	>>> add(2.4, 3.5)
+	5
+
+	>>> add(2, 4)
+	6
+
+Test for missing argument
+-----------------------------------------------------
+	>>> add(2)
+	100
+
+	>>> add(a=4)
+	102
+
+	>>> add(b=6)
+	Traceback (most recent call last):
+		...
+	TypeError: add_integer() missing 1 required positional argument: 'a'
