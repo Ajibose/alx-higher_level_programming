@@ -1,46 +1,59 @@
-A test to for the print_square function
+===================================================
+Doctest for module `4-print_square.py`
+===================================================
+The module contains a function `print_square' that prints a square with the symbol '#'
+One argument should be passed to the function
+	size(int): The size of the sqaure to print
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Import the module
->>> import sys
->>> sys.path.insert(1, '../')
->>> lib = __import__("4-print_square")
->>> func = lib.print_square
+Import module
+------------------------
+	>>> square = __import__('4-print_square').print_square
 
-#Normal addition test
-'''
->>> func(3)
-###
-###
-###
+Check for missing argument
+------------------------------
+	>>> square()
+	Traceback (most recent call last):
+		...
+	TypeError: print_square() missing 1 required positional argument: 'size'
+
+Check for argument correct type
+-----------------------------------
+	>>> square(float('nan'))
+	Traceback (most recent call last):
+		...
+	TypeError: size must be an integer
+
+	>>> square(float('inf'))
+	Traceback (most recent call last):
+		...
+	TypeError: size must be an integer
+
+	>>> square("4")
+	Traceback (most recent call last):
+		...
+	TypeError: size must be an integer
+	
+	>>> square(-2)
+	Traceback (most recent call last):
+		...
+	ValueError: size must be >= 0
+
+	>>> square(0)
+	>>> square(2.3)
+	Traceback (most recent call last):
+		...
+	TypeError: size must be an integer
+
+	>>> square(-2.4)
+	Traceback (most recent call last):
+		...
+	TypeError: size must be an integer
+
+	>>> square(4)
+	####
+	####
+	####
+	####
 
 
-#Type Errors
-
->>> func("")
-Traceback (most recent call last):
-...
-TypeError: size must be an integer
->>> func(12.3)
-Traceback (most recent call last):
-...
-TypeError: size must be an integer
->>> func([])
-Traceback (most recent call last):
-...
-TypeError: size must be an integer
->>> func({})
-Traceback (most recent call last):
-...
-TypeError: size must be an integer
->>> func(1j)
-Traceback (most recent call last):
-...
-TypeError: size must be an integer
-
-
-
-#value Errors
->>> func(-1)
-Traceback (most recent call last):
-...
-ValueError: size must be >= 0
