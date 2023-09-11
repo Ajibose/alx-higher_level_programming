@@ -62,3 +62,20 @@ Test for method `integer_validator`
 	TypeError: distance must be an integer
 
 	>>> bg1.integer_validator("my_int", 12)
+
+	>>> bg1.integer_validator()
+	Traceback (most recent call last):
+		...
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+	>>> bg1.integer_validator(12)
+	Traceback (most recent call last):
+		...
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Print the object
+------------------------
+	>>> bg1 #doctest: +ELLIPSIS
+	<7-base_geometry.BaseGeometry object at 0x...>
+	>>> print(bg1) #doctest: +ELLIPSIS
+	<7-base_geometry.BaseGeometry object at 0x...>
