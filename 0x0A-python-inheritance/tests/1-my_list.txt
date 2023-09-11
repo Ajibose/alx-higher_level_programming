@@ -29,8 +29,12 @@ Check for the sorted list
 check for argument to the class
 --------------------------------
 	>>> obj2 = my_list([])
+	>>> obj2.print_sorted()
+	[]
 	>>> obj2 = my_list(1)
 	Traceback (most recent call last):
 		...
 	TypeError: 'int' object is not iterable
 	>>> obj2 = my_list("2")
+	>>> obj2.print_sorted()
+	['2']
