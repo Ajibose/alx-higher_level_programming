@@ -41,6 +41,10 @@ check for argument to the class
 	>>> obj2 = my_list([1, 4, 3, 6])
 	>>> obj1.print_sorted()
 	[1, 3, 4, 6]
+	>>> obj2 = my_list([3, 1, 2])
+	>>> obj2.print_sorted()
+	[1, 2, 3]
+	
 
 Check for sorting of list with 1 element
 ------------------------------------------
