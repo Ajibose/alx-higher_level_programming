@@ -1,0 +1,27 @@
+===========================================================
+Doctest for module `1-my_list.py`
+===========================================================
+
+Import module
+--------------------
+	>>> my_list = __import__('1-my_list').MyList
+
+Create class instances
+---------------------------------
+	>>> obj1 = my_list()
+	>>> obj2 = my_list()
+
+Check equality of two instances
+-----------------------
+	>>> id(obj1) == id(obj2)
+	False
+
+Check for the sorted list
+----------------------------
+	>>> obj1.extend([1, 4, 3, 6])
+	>>> obj1
+	[1, 4, 3, 6]
+	>>> obj1.print_sorted()
+	[1, 3, 4, 6]
+	>>> len(obj1)
+	4
