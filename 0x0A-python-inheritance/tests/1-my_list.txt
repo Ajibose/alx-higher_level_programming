@@ -74,3 +74,10 @@ Check for a list object with the class method
 	Traceback (most recent call last):
 		...
 	AttributeError: 'list' object has no attribute 'print_sorted'
+
+Check for non-existent object
+------------------------------------------------
+	>>> obj3.print_sorted()
+	Traceback (most recent call last):
+		...
+	NameError: name 'obj3' is not defined
