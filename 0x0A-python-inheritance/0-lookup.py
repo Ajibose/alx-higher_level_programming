@@ -10,4 +10,7 @@ def lookup(obj):
         Return the list of the attriutes and methods
 
     """
+    if not obj:
+        return
+
     return dir(obj)
