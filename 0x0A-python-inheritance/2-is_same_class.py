@@ -9,7 +9,4 @@ def is_same_class(obj, a_class):
         return True on success, otherwise False
 
     """
-    if obj.__class__ == a_class:
-        return True
-
-    return False
+    return (obj.__class__ == a_class)
