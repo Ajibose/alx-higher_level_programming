@@ -1,4 +1,4 @@
-#/usr/bin/python3
+#!/usr/bin/python3
 """Defines a function that appends to the end of a text file"""
 
 
@@ -6,7 +6,7 @@ def append_write(filename="", text=""):
     """Appends to the end of a file using UTF8 encoding
 
     Args:
-        filename(str, optional): path to file to write to 
+        filename(str, optional): path to file to write to
         text(str, optional): string to append to file
 
     Return:
