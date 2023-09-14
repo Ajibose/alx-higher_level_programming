@@ -32,7 +32,7 @@ def roman_to_int(roman_string):
     res = 0
     former_value = 'A'
 
-    if type(roman_string) != str or is not roman_string:
+    if type(roman_string) != str or not roman_string:
         return res
 
     for i in range(len(roman_string)):
