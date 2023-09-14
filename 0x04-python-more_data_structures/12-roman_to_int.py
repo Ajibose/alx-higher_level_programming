@@ -2,7 +2,6 @@
 """Technical interview Preparation at ALX_SE"""
 
 
-
 def get_value(ch):
     arr = [
             ['I', 1],
