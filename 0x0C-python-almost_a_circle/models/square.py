@@ -39,5 +39,3 @@ class Square(Rectangle):
             for i, j in kwargs.items():
                 if i in attributes:
                     setattr(self, i, j)
-
-

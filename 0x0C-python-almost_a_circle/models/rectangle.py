@@ -4,6 +4,7 @@
 
 from models.base import Base
 
+
 class Rectangle(Base):
     """Represent the rectangle
 
@@ -106,4 +107,3 @@ class Rectangle(Base):
             for i, j in kwargs.items():
                 if i in attributes:
                     setattr(self, i, j)
-
