@@ -122,4 +122,3 @@ class Rectangle(Base):
                 my_dict[i] = j
 
         return my_dict
-            
