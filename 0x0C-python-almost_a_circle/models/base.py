@@ -2,6 +2,9 @@
 """Defines a Base model class"""
 
 
+import json
+
+
 class Base():
     """Represent the base model
 
@@ -26,3 +29,7 @@ class Base():
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        """Return the json string representation of an object"""
+        return json.dumps(list_dictionaries)
