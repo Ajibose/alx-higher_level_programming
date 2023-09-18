@@ -6,9 +6,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """Represent the rectangle
-
-    """
+    """Represent the rectangle"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initialize the rectangle class
 
@@ -28,7 +26,7 @@ class Rectangle(Base):
     def __str__(self):
         """Rectagle str representation"""
         return f"[{self.__class__.__name__}] ({self.id})"\
-                f"{self.__x}/{self.__y} - {self.__width}/{self.__height}"
+            f"{self.__x}/{self.__y} - {self.__width}/{self.__height}"
 
     @property
     def width(self):
@@ -38,7 +36,7 @@ class Rectangle(Base):
     @property
     def height(self):
         """height attribute getter and setter property"""
-        `return self.__height
+        return self.__height
 
     @property
     def x(self):
