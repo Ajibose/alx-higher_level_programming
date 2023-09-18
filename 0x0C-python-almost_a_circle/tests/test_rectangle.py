@@ -472,3 +472,7 @@ class Rectangle_UpdateTest_kwargs(unittest.TestCase):
 
         self.r.update(11, 12, width=13, x=14, y=15)
         self.assertEqual("[Rectangle] (11) 1/1 - 12/1", str(self.r))
+
+
+if __name__ == "__main__":
+    unittest.main()
