@@ -114,11 +114,11 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """Gets the dictionary representation of a Rectangle"""
-        _my_dict = {}
+        my_dict = {}
         for i, j in self.__dict__.items():
             if i[:1] == "_":
-                _my_dict[i.split("__")[-1]] = j
+                my_dict[i.split("__")[-1]] = j
             else:
-                _my_dict[i] = j
+                my_dict[i] = j
 
-        return _my_dict
+        return my_dict
