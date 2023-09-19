@@ -48,7 +48,7 @@ class Base():
 
         """
         filename = cls.__name__ + ".json"
-        with open(filename, 'a', encoding="utf-8") as f:
+        with open(filename, 'w', encoding="utf-8") as f:
             if len(list_objs) == 0:
                 f.write("[]")
             else:
