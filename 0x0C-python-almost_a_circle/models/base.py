@@ -53,7 +53,7 @@ class Base():
                 f.write("[]")
             else:
                 obj_list = [item.to_dictionary() for item in list_objs]
-        
+
         f.write(Base.to_json_string(obj_list))
 
     @staticmethod
