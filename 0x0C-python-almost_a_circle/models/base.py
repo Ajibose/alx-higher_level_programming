@@ -54,7 +54,7 @@ class Base():
             else:
                 obj_list = [item.to_dictionary() for item in list_objs]
 
-        f.write(Base.to_json_string(obj_list))
+            f.write(Base.to_json_string(obj_list))
 
     @staticmethod
     def from_json_string(json_string):
@@ -73,3 +73,19 @@ class Base():
             obj = cls(1)
         cls.update(obj, **dictionary)
         return obj
+
+    @classmethod
+    def load_from_file(cls):
+        """returns a list of instances from a filereturns a list of instances"""
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, "r", encoding="utf-8") as f:
+                list_str = f.read()
+                my_list = cls.from_json_string(list_str)
+                list_dict = []
+                for i in my_list:
+                    list_dict.append(cls.create(**i))
+
+                return list2
+        except FileNotFoundError:
+            return []
