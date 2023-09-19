@@ -81,7 +81,7 @@ class Base():
         try:
             with open(filename, "r", encoding="utf-8") as f:
                 list_str = f.read()
-                my_list = cls.from_json_string(list_str)
+                my_list = Base.from_json_string(list_str)
                 list_dict = []
                 for i in my_list:
                     list_dict.append(cls.create(**i))
