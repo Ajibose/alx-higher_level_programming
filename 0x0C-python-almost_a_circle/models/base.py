@@ -50,7 +50,7 @@ class Base():
         filename = cls.__name__ + ".json"
         with open(filename, 'a', encoding="utf-8") as f:
             if len(list_objs) == 0:
-                json.dump("[]")
+                f.write("[]")
             else:
                 obj_list = [item.to_dictionary() for item in list_objs]
                 f.write(Base.to_json_string(obj_list))
