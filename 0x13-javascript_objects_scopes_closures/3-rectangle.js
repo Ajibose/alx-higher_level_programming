@@ -9,12 +9,11 @@ class Rectangle {
   }
 
   print () {
-    let str = '';
     let i = 0;
     let j = 0;
 
     while (i < this.width) {
-      str = '';
+      let str = '';
       j = 0;
       while (j < this.height) {
         str += 'X';
