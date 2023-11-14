@@ -12,10 +12,10 @@ class Rectangle {
     let i = 0;
     let j = 0;
 
-    while (i < this.width) {
+    while (i < this.height) {
       let str = '';
       j = 0;
-      while (j < this.height) {
+      while (j < this.width) {
         str += 'X';
         j++;
       }
