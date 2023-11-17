@@ -12,7 +12,10 @@ if __name__ == '__main__':
 
     cur = conn.cursor()
 
-    cur.execute("SELECT c.id, c.name, s.name FROM cities c INNER JOIN states s ON c.state_id = s.id")
+    cur.execute(
+            "SELECT c.id, c.name, s.name FROM cities c\
+                    INNER JOIN states s ON c.state_id = s.id"
+                    )
 
     for row in cur.fetchall():
         print(row)
