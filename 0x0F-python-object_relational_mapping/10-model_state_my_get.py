@@ -23,9 +23,9 @@ def fetch_state_by_name():
     session = Session()
 
     rows = session.query(State.id).filter(text("name=:name"))\
-        .params(name=state_name)
+        .params(name=state_name).all()
 
-    if (rows):
+    if rows:
         for row in rows:
             print(*row)
     else:
