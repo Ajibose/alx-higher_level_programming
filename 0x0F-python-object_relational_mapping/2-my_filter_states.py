@@ -14,7 +14,7 @@ if __name__ == '__main__':
     cur = conn.cursor()
 
     cur.execute(
-            "SELECT * FROM states WHERE name='{}'\
+            "SELECT * FROM states WHERE name='{}' COLLATE utf8mb4_bin\
                     ORDER BY id ASC".format(sys.argv[4])
                     )
     for row in cur.fetchall():
