@@ -13,7 +13,7 @@ def delete_state_a():
         Deletes all object with name that contains a
     """
     user, passwd, database = sys.argv[1], sys.argv[2], sys.argv[3]
-    
+
     engine = create_engine(
             f'mysql+mysqldb://{user}:'
             f'{passwd}@localhost:3306/{database}', pool_pre_ping=True)
@@ -30,7 +30,7 @@ def delete_state_a():
 
 
 if __name__ == '__main__':
-    if  len(sys.argv) < 4:
+    if len(sys.argv) < 4:
         print("Requires three arguments")
         sys.exit(1)
 
