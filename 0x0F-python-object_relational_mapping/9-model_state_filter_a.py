@@ -19,13 +19,16 @@ def fetch_state_a():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    rows = session.query(State).filter(State.name.like('%a%')).order_by(State.id)
+    rows = session.query(State).filter(
+            State.name.like('%a%')).order_by(State.id)
     for row in rows:
         print(row.id, row.name, sep=': ')
 
+
 if __name__ == '__main__':
     if len(sys.argv) < 4:
-        print("Usage: filename mysql username, mysql password and database name")
+        print("Usage: filename mysql username,\
+                mysql password and database name")
         sys.exit(1)
 
     fetch_state_a()
