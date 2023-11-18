@@ -33,7 +33,7 @@ def fetch_state_by_name():
 
 
 if __name__ == '__main__':
-    if len(sys.argv) < 4:
+    if len(sys.argv) < 5:
         print("Usage: filename username, mysql password,\
                     database name and state name to search")
         sys.exit(1)
