@@ -12,6 +12,6 @@ def fetch_content(url):
         return response.read()
 
 
-if __name__ == '__main__'
+if __name__ == '__main__':
     fetch_content('https://alx-intranet.hbtn.io/status')
 
