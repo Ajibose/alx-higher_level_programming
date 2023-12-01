@@ -13,5 +13,10 @@ def fetch_content(url):
 
 
 if __name__ == '__main__':
-    response = fetch_content('https://alx-intranet.hbtn.io/status')
-    print(response)
+    content = fetch_content('https://alx-intranet.hbtn.io/status')
+    print(
+            f"Body response:\n\t- "
+            f"type: {type(content)}\n\t- "
+            f"content: {content}\n\t- "
+            f"utf8 content: {content.decode()}"
+            )
