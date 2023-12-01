@@ -13,4 +13,5 @@ def fetch_content(url):
 
 
 if __name__ == '__main__':
-    fetch_content('https://alx-intranet.hbtn.io/status')
+    response = fetch_content('https://alx-intranet.hbtn.io/status')
+    print(response)
