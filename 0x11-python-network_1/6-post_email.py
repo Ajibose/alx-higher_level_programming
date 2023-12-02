@@ -8,7 +8,6 @@ import requests
 
 def post_content(url, email):
     """"ends a POST request to the passed URL with the email as a parameter,"""
-    email = email.split('=')[1]
     value = {'email': email}
     req = requests.post(url, data=value)
     return req
