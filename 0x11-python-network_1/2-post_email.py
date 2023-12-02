@@ -12,7 +12,7 @@ def post_content(url, email):
     values = {'email': email}
     data = urllib.parse.urlencode(values)
     data = data.encode('ascii')
-    req = urllib.request.Request(url)
+    req = urllib.request.Request(url, data)
     with urllib.request.urlopen(req) as response:
         return response.read
 
