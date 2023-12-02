@@ -16,4 +16,4 @@ def get_requestId(url):
 
 if __name__ == '__main__':
     url = sys.argv[1]
-    get_requestId(url)
+    print(get_requestId(url))
