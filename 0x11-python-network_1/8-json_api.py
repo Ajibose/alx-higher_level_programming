@@ -16,9 +16,7 @@ if __name__ == '__main__':
     req = requests.post(url, data={'q': val})
     
     content_dict = json.loads(req.text)
-        if not content_dict:
-            print("No result")
-        else:
+    if not content_dict:
+        print("No result")
+    else:
             print(f"[{content_dict['id']}] {content_dict['name']}")
-    except Exception as e:
-        print("Not a valid JSON")
