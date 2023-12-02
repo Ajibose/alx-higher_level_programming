@@ -14,4 +14,4 @@ def post_content(url, email):
 
 
 if __name__ == '__main__':
-    print(post_content(sys.argv[1], sys.argv[2]))
+    print(f"Your email is: {post_content(sys.argv[1], sys.argv[2])})
