@@ -16,4 +16,5 @@ def make_connection(url):
 if __name__ == '__main__':
     url = sys.argv[1]
     headers = make_connection(url)
-    print(headers['X-Request-Id'])
+    if 'X-Request-Id' in headers:
+        print(headers['X-Request-Id'])
