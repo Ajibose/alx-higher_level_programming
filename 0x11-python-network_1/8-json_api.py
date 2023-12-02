@@ -15,7 +15,10 @@ if __name__ == '__main__':
     url = 'http://0.0.0.0:5000/search_user'
     req = requests.post(url, data={'q': val})
     
-    content_dict = eval(req.text)
+    try:
+        content_dict = eval(req.text)
+    except Exception:
+        print("Not a valid JSON")
     
     if type(content_dict) != dict:
         print("Not a valid JSON")
