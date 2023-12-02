@@ -14,9 +14,9 @@ def post_content(url, email):
     data = data.encode('ascii')
     req = urllib.request.Request(url, data)
     with urllib.request.urlopen(req) as response:
-        return response.read
+        return response.read().decode("utf-8")
 
 
 
 if __name__ == '__main__':
-    post_content(sys.argv[1], sys.argv[2])
+    print(post_content(sys.argv[1], sys.argv[2]))

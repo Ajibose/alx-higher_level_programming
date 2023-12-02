@@ -11,10 +11,10 @@ def connect_with(url):
     try:
         req = urllib.request.Request(url)
         with urllib.request.urlopen(req) as response:
-            return response.read()
+            return response.read().decode("utf-8")
     except urllib.error.HTTPError as e:
         return f"Error code: {e.code}"
 
 
 if __name__ == '__main__':
-    connect_with(sys.argv[1])
+    print(connect_with(sys.argv[1]))
