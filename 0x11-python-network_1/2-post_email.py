@@ -17,6 +17,5 @@ def post_content(url, email):
         return response.read().decode("utf-8")
 
 
-
 if __name__ == '__main__':
     print(post_content(sys.argv[1], sys.argv[2]))
