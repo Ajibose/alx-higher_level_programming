@@ -23,4 +23,4 @@ if __name__ == '__main__':
     if not content_dict:
         print("No result")
     else:
-            print(f"[{content_dict['id']}] {content_dict['name']}")
+        print(f"[{content_dict['id']}] {content_dict['name']}")
