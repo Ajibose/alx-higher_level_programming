@@ -11,11 +11,12 @@ if __name__ == '__main__':
     headers = {
             "Accept": "application/vnd.github+json",
             "Authorization": f"Bearer {sys.argv[2]}",
-            "X-GitHub-Api-Version": "2022-11-28"}
+            "X-GitHub-Api-Version": "2022-11-28",
+            "User-Agent": user}
 
-    url = f"https://api.github.com/{user}"
+    url = f"https://api.github.com/user"
     response = requests.get(url, headers=headers)
     if not response:
         print("None")
     else:
-        print(response.json["id"])
+        print(response.json()["id"])
