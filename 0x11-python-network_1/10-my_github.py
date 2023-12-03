@@ -2,7 +2,8 @@
 """
     Display my id using the Github API
 """
-import sys, requests
+import sys
+import requests
 
 
 if __name__ == '__main__':
