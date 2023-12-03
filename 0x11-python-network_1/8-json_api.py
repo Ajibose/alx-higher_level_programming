@@ -16,7 +16,7 @@ if __name__ == '__main__':
     req = requests.post(url, data={'q': val})
     
     try:
-        content_dict = eval(req.text)
+        content_dict = req.json
     except Exception:
         print("Not a valid JSON")
     
