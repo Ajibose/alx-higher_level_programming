@@ -14,4 +14,6 @@ if __name__ == '__main__':
 
     url = f"https://api.github.com/{user}"
     response = requests.get(url, headers=headers)
+    if not response:
+        print("None")
     print(response.json["id"])
