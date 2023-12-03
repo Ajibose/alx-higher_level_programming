@@ -19,6 +19,7 @@ if __name__ == '__main__':
         content_dict = req.json()
     except ValueError:
         print("Not a valid JSON")
+        sys.exit()
 
     if not content_dict:
         print("No result")
