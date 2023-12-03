@@ -17,4 +17,5 @@ if __name__ == '__main__':
     response = requests.get(url, headers=headers)
     if not response:
         print("None")
-    print(response.json["id"])
+    else:
+        print(response.json["id"])
