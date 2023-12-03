@@ -20,9 +20,7 @@ if __name__ == '__main__':
     except Exception:
         print("Not a valid JSON")
     
-    if type(content_dict) != dict:
-        print("Not a valid JSON")
-    elif not content_dict:
+    if not content_dict:
         print("No result")
     else:
             print(f"[{content_dict['id']}] {content_dict['name']}")
