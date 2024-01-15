@@ -17,5 +17,5 @@ request('https://jsonplaceholder.typicode.com/todos', (err, response, body) => {
       }
     }
   });
-  console.log(taskCount);
+  console.log(JSON.stringify(taskCount));
 });
