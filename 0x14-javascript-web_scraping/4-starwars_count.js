@@ -6,15 +6,17 @@ request(process.argv[2], (err, response, body) => {
     console.error(err);
     return;
   }
-  let i = 0;
 
-  for (const element of JSON.parse(body).results) {
-    const characters = element.characters;
-    characters.forEach(ch => {
-      if (ch.endsWith('18/')) {
-        i++;
-      }
-    });
+  if (response.statusCode === 200) {
+    let i = 0;
+    for (const element of JSON.parse(body).results) {
+      const characters = element.characters;
+      characters.forEach(ch => {
+        if (ch.endsWith('18/')) {
+          i++;
+        }
+      });
+    }
+    console.log(i);
   }
-  console.log(i);
 });
